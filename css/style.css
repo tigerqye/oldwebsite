@@ -1,0 +1,65 @@
+body{
+	background-color: #1C2833;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 1.6em;
+	margin:0;
+}
+
+.container{
+	width:80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+#main-header{
+	background-color:black;
+	color: white;
+}
+
+#navagation{
+	background-color: #1C2833;
+	color: white;
+}
+
+#navagation ul{
+	padding: 0;
+	list-style: none;
+}
+
+#navagation li{
+	display: inline;
+}
+
+#navagation a{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	padding-right: 50px;
+}
+
+#profile{
+	margin: none;
+	float: left;
+	width: 40%;
+	height: 500px;
+	background-image: url("../images/prof.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#about{
+	background:  #EB984E;
+}
+
+
+#projects{
+
+}
+
+#footer{
+	text-align: center;
+	font-size: 10px;
+	background-color: black;
+}
