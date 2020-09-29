@@ -50,9 +50,13 @@ body{
 }
 
 #about{
-	background:  #EB984E;
+	background: #EB984E;
 }
 
+#about_text{
+	width: 60%;
+	float: right;
+}
 
 #projects{
 
@@ -62,4 +66,41 @@ body{
 	text-align: center;
 	font-size: 10px;
 	background-color: black;
+}
+
+.fixed{
+	position: fixed;
+	top: 300px;
+}
+
+.project_box{
+	float: left;
+	width: calc(50% - 20px);
+	background-color:#EB984E;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: 10px black transparent;
+	box-sizing: border-box;
+	margin: 10px;
+
+}
+
+#sidebar{
+	background-color: black;
+	color: white;
+}
+
+#sidebar ul{
+	padding: 10px;
+	list-style: none;
+	background-color: black;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#sidebar a{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	padding-right: 20px;
 }
