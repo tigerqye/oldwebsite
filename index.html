@@ -1,94 +1,158 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tiger Ye</title>
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
-</head>
-<body>
-	<div class="container">
-		<header id="main-header">
-			<h1>Tiger Ye</h1>
-		</header>
-	</div>	
-	
-	<div class="container">
-		<nav id="navagation">
-		<ul>
-			<li><img src="images/logo.png" alt="logo"></i>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Projects</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-		</nav>
-	</div>
+/*body font*/
+body{
+	background-color: #fff;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 1.6em;
+	margin:0;
+}
 
-	
+/*container*/
+.container{
+	width:80%;
+	margin: auto;
+	overflow: hidden;
+}
 
-	<div class="container">
-		<div class="half">
-			<img src="images/profe.png" alt="profile">
-		</div>
-		<div class="half">
-			<h1>ABOUT</h1>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse			cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</div>
-	</div>
+.half{
+	width: 50%;
+	box-sizing: border-box;
+	float: left;
+	padding: 10px;
+}
 
-	<div class="withbackground">
-		<div class="container">
-			<h1>EXPERIENCE</h1>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</div>
-	</div>
+.half img{
+	height: auto;
+	width: 80%;
+}
 
-	<div class="container">
-		<h1>PROJECTS</h1>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse			cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-		<div class="container project_box">
-				<h1>Canada Airport</h1>
-				<p> Designed an airport program that read airplane flights from a textfile and displayed departure and arrival flights to Toronto.</p>
-			</div>
-			<div class="container project_box">
-				<h1>Turntable</h1>
-				<p> Used CAD knowlegde to design a turntable in Fusion 360 and printed it out using a 3D printer.</p>
-			</div>
-			<div class="container project_box">
-				<h1>Computer Mouse</h1>
-				<p> Used Soliworks to design a mouse body which was outfitted with the curcuit board of an old mouse.</p>
-			</div>
-			<div class="container project_box">
-				<h1>To the Moon</h1>
-				<p> Google play game made in Godot using python</p>
-			</div>
-	</div>
+.withbackground{
+	background-color: black;
+	color: white;
+	padding: 30px;
+}
 
-	<footer id="footer">
-		<p>Copyright &copy; 2020 Tiger Ye</p>
-	</footer>
+#emailAddress{
+	position: fixed;
+	top: -30px;
+}
 
-</body>
-</html>
+/*for the heading*/
+#main-header{
+	background-color: black;
+	color: white;
+	text-align: left;
+	padding: 10px;
+}
+
+#logo{
+	background: url("./images/logo.png") no-repeat;
+	padding: none;
+	margin: none;
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	min-height: 32px;
+	min-width: 64px;
+	background-color: inherit;
+}
+
+#logo:active{
+	border:none;
+	outline:none;
+	padding:0;
+}
+
+#logo:focus{
+	outline: 0;
+}
+
+#email{
+	background-color: inherit;
+	color: white;
+	padding: none;
+	margin: none;
+	border: none;
+	cursor: pointer;
+	min-height: 32px;
+	font-size: inherit;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#email:active{
+	border:none;
+	outline:none;
+	padding:none;
+}
+
+#email:focus{
+	outline: 0;
+}
+
+#navagation{
+	background-color: black;
+ 	overflow: hidden;
+}
+
+#navagation ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 16px;
+}
+
+#navagation li{
+	background-color: black;
+	float:left;
+	display: inline-flex;
+	padding: 10px;
+	transition-duration: 500ms;
+	transition-property: background;
+}
+
+#navagation a{
+	color: white;
+	text-decoration: none;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#navagation li:hover{
+	background: grey;
+}
+
+.project_box{
+	float: left;
+	width: calc(50% - 20px);
+	background-color: black;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: 10px black transparent;
+	box-sizing: border-box;
+	margin: 10px;
+	height: 400px;
+	transition-duration: 500ms;
+	color: white;
+
+}
+
+.project_box:hover {
+	background: grey;
+}
+
+#footer{
+	margin-top: 10px;
+	text-align: center;
+	font-size: 10px;
+	background-color: black;
+	color: white;
+	overflow: hidden;
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 80%;
+}
