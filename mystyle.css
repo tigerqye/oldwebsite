@@ -33,12 +33,62 @@ body{
 	padding: 30px;
 }
 
+#emailAddress{
+	position: fixed;
+	top: -30px;
+}
+
 /*for the heading*/
 #main-header{
 	background-color: black;
 	color: white;
 	text-align: left;
 	padding: 10px;
+}
+
+#logo{
+	background: url("./images/logo.png") no-repeat;
+	padding: none;
+	margin: none;
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	min-height: 32px;
+	min-width: 64px;
+	background-color: inherit;
+}
+
+#logo:active{
+	border:none;
+	outline:none;
+	padding:0;
+}
+
+#logo:focus{
+	outline: 0;
+}
+
+#email{
+	background-color: inherit;
+	color: white;
+	padding: none;
+	margin: none;
+	border: none;
+	cursor: pointer;
+	min-height: 32px;
+	font-size: inherit;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#email:active{
+	border:none;
+	outline:none;
+	padding:none;
+}
+
+#email:focus{
+	outline: 0;
 }
 
 #navagation{
@@ -50,6 +100,7 @@ body{
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	font-size: 16px;
 }
 
 #navagation li{
@@ -64,13 +115,12 @@ body{
 #navagation a{
 	color: white;
 	text-decoration: none;
-	font-size: 16px;
 	padding-left: 30px;
 	padding-right: 30px;
 }
 
 #navagation li:hover{
-	background: #1C2833;
+	background: grey;
 }
 
 .project_box{
@@ -89,7 +139,7 @@ body{
 }
 
 .project_box:hover {
-	background: #1C2833;
+	background: grey;
 }
 
 #footer{
@@ -99,4 +149,10 @@ body{
 	background-color: black;
 	color: white;
 	overflow: hidden;
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 80%;
 }
