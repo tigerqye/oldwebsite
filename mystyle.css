@@ -12,11 +12,52 @@ body{
 	margin:0;
 }
 
+.fadeIn{
+	animation-duration: 3000ms;
+	animation-name: fadein;
+}
+
+@keyframes fadein {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.fadeOut{
+	animation-duration: 2000ms;
+	animation-name: fadeout;
+}
+
+@keyframes fadeout {
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+
+#loader {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+  	margin: 0;
+	width:100%;
+	background-color: black;
+	overflow: hidden;
+	color: white;
+	text-align: center;
+}
+
+#loader h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 /*container*/
 .container{
 	width:80%;
 	margin: auto;
 	overflow: hidden;
+	z-index: -1;
+	display: none;
 }
 
 .half{
@@ -35,6 +76,7 @@ body{
 	background-color: black;
 	color: white;
 	padding: 30px;
+	display: none;
 }
 
 #emailAddress{
@@ -128,6 +170,7 @@ body{
 }
 
 .project_box{
+	position: relative;
 	float: left;
 	width: calc(50% - 20px);
 	background-color: black;
@@ -136,10 +179,10 @@ body{
 	border: 10px black transparent;
 	box-sizing: border-box;
 	margin: 10px;
-	height: 400px;
+	height: 0;
+	padding-bottom: calc(50% - 20px);
 	transition-duration: 500ms;
 	color: white;
-
 }
 
 .project_box:hover {
