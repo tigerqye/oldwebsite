@@ -10,8 +10,10 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<body>
-	<div class="container">
+<body onload="preload()">
+	<div id="loader"><h1>Tiger Ye</h1></div>
+
+	<div class="container fadeIn">
 		<header id="main-header">
 			<h1>Tiger Ye</h1>
 		</header>
@@ -19,7 +21,7 @@
 
 	<input type="text" value="tigerqye@gmail.com" id="emailAddress">
 	
-	<div class="container">
+	<div class="container fadeIn">
 		<nav id="navagation">
 		<ul>
 			<li><button onclick="toTop()" id="logo"></button></li>
@@ -27,12 +29,12 @@
 			<li><a href="https://www.linkedin.com/in/tiger-ye-2999221b5/" target="_blank">LinkedIn</a></li>
 			<li><a href="https://github.com/tigerqye" target="_blank">GitHub</a></li>
 			<li><a href="https://grabcad.com/tiger-12" target="_blank">GrabCAD</a></li>
-			<li><a href="/images/Tiger_Ye_Resume.pdf" target="_blank">Resume</a></li>
+			<li><a href="images/Tiger_Ye_Resume.pdf" target="_blank">Resume</a></li>
 		</ul>
 		</nav>
 	</div>
 
-	<div class="container">
+	<div class="container fadeIn">
 		<div class="half">
 			<img src="images/profe.png" alt="profile">
 		</div>
@@ -44,7 +46,7 @@
 		</div>
 	</div>
 
-	<div class="withbackground">
+	<div class="withbackground fadeIn">
 		<div class="container">
 			<h1>EXPERIENCE</h1>
 			<p>
@@ -62,14 +64,14 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container fadeIn">
 		<h1>PROJECTS</h1>
 		<div class="container project_box">
 			<h1>3D Working Mouse Design</h1>
 			<p> Used Solidworks form tools to design an original sleek and ergonomic computer mouse shell which could be outfitted with a circuit board from a broken computer mouse.</p>
 		</div>
 		<div class="container project_box">
-			<h1>To the Moon</h1>
+			<h1>Conveyor CAD</h1>
 			<p> A game developed in the Godot game engine using python currently available on Google Playstore. To the Moon is an atmospheric game where the player uses touch gestures to jump up a series of randomly generated platforms in hopes of reaching the moon. All assets were 100% made personally, from the code to the sprites and composing an original version of clair de lune.</p>
 		</div>
 		<div class="container project_box">
@@ -82,7 +84,7 @@
 		</div>
 	</div>
 
-	<footer id="footer">
+	<footer class="container fadeIn" id="footer">
 		<p>Copyright &copy; 2020 Tiger Ye</p>
 	</footer>
 
