@@ -12,6 +12,11 @@ body{
 	margin:0;
 }
 
+a{
+	color: #00BBEE;
+	text-decoration: none;
+}
+
 .fadeIn{
 	animation-duration: 3000ms;
 	animation-name: fadein;
@@ -170,7 +175,6 @@ body{
 }
 
 .project_box{
-	position: relative;
 	float: left;
 	width: calc(50% - 20px);
 	background-color: black;
@@ -179,15 +183,16 @@ body{
 	border: 10px black transparent;
 	box-sizing: border-box;
 	margin: 10px;
-	height: 0;
-	padding-bottom: calc(50% - 20px);
+	height: 500px;
 	transition-duration: 500ms;
 	color: white;
 }
 
+/*
 .project_box:hover {
 	background: grey;
 }
+*/
 
 #footer{
 	margin-top: 10px;
