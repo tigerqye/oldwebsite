@@ -8,86 +8,90 @@
 	<link rel="manifest" href="favicon/site.webmanifest">
 	<meta name="msapplication-TileColor" content="#2b5797">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel="stylesheet" type="text/css" href="newstyle.css">
 </head>
 <body onload="preload()">
-	<div id="loader"><h1>Tiger Ye</h1></div>
-
-	<div class="container fadeIn">
-		<header id="main-header">
-			<h1>Tiger Ye</h1>
-		</header>
-	</div>
-
-	<input type="text" value="tigerqye@gmail.com" id="emailAddress">
-	
-	<div class="container fadeIn">
+	<div id="header" class="fadeinwhite">
+		<h1>Tiger Ye</h1>
 		<nav id="navagation">
 		<ul>
-			<li><button onclick="toTop()" id="logo"></button></li>
 			<li><button onclick="copyEmail()" id="email">Email</button></li>
 			<li><a href="https://www.linkedin.com/in/tiger-ye-2999221b5/" target="_blank">LinkedIn</a></li>
 			<li><a href="https://github.com/tigerqye" target="_blank">GitHub</a></li>
-			<li><a href="https://grabcad.com/tiger-12" target="_blank">GrabCAD</a></li>
+			<li><a href="https://grabcad.com/tiger.ye-1" target="_blank">GrabCAD</a></li>
 			<li><a href="images/Tiger_Ye_Resume.pdf" target="_blank">Resume</a></li>
 		</ul>
 		</nav>
 	</div>
-
-	<div class="container fadeIn">
-		<div class="half">
-			<img src="images/profe.png" alt="profile">
-		</div>
-		<div class="half">
-			<h1>ABOUT</h1>
-			<p>
-				Hi my name is Tiger Ye and I am currently an undergraduate student studying Mechatronics Engineering at the University of Waterloo. I currently love to combine my interests of CAD and programming to make unique and interesting creations.
-			</p>
-			<p>
-				I've always been infatuated with the idea of making small gadgets at a young age. I am currently working towards learning the basics of circuit design to compliment my CAD and programming skills and fulfill my childhood dream.
-			</p>
+	<div class="container" id="profile">
+		<img src="images/profe.png" alt="profile" class="image_left">
+		<div class="text_right">
+			<h2>ABOUT</h2>
+			<p>Hi my name is Tiger Ye and I am currently an undergraduate student studying Mechatronics Engineering at the University of Waterloo. I love to combine my interests of CAD and programming to make unique and interesting creations.</p>
+			<p>I've always been infatuated with the idea of making small gadgets at a young age. I am currently working towards learning the basics of circuit design to compliment my CAD and programming skills and fulfill my childhood dream.</p>
 		</div>
 	</div>
-
-	<div class="withbackground fadeIn">
+	<! -- do I want a skills part?-->
+	<div class="full_back">
 		<div class="container">
-			<h1>EXPERIENCE</h1>
-			<p>
-				<b>Perseverance</b> - Getting the job done is not always easy, I know this from personal experience. Whether it was running cross country or working to finish a long arduous project I have learned to push myself to cross the finish line no matter the task.
-			</p>
-			<p>
-				<b>Leadership</b> - Working as the Design and Overall lead for Agincourt’s FRC robotics team I was pushed into a leadership role in the team. This was the first time I led a major project and eventually I learned to become the leader the team needed.
-			</p>
-			<p>
-				<b>Curiosity</b> - I love to tinker with things whether it is physical or virtual and learn how they work. One of these things is the website you are on right now! I have always been curious about how web-development works so I took a few weeks to learn the basics of Javascript, CSS and HTML through online resources and made this website.
-			</p>
+		<h2>SKILLS</h2>
+		<p><b>Languages:</b> C++, Java, Python, Javascript, CSS, HTML</p>
+		<p><b>CAD:</b> Solidworks, Inventor, Fusion 360, AutoCAD, TinkerCAD</p>
+		<p><b>Other:</b> Microsoft Office, Cura, GrabCAD Print, Photoshop</p>
 		</div>
 	</div>
-
-	<div class="container fadeIn">
-		<h1>PROJECTS</h1>
-		<div class="container project_box">
-			<h1>Computer Mouse Design</h1>
-			<p> Used Solidworks form tools to design an original sleek and ergonomic computer mouse shell to be 3D printed. Constraints included designing around a circuit board from a seperate mouse and designing for 3D printability. More details can be found <a href="https://grabcad.com/library/computer-mouse-85" target="_blank">here</a>.</p>
+	<div class="container">
+		<h2>EXPERIENCE</h2>
+		<p>
+			<b>Perseverance</b> - Getting the job done is not always easy, I know this from personal experience. Whether it was running cross country or working to finish a long arduous project I have learned to push myself to cross the finish line no matter the task.
+		</p>
+		<p>
+			<b>Leadership</b> - Working as the Design and Overall lead for Agincourt’s FRC robotics team I was pushed into a leadership role in the team. This was the first time I led a major project and eventually I learned to become the leader the team needed.
+		</p>
+		<p>
+			<b>Curiosity</b> - I love to tinker with things whether it is physical or virtual and learn how they work. One of these things is the website you are on right now! I have always been curious about how web-development works so I took a few weeks to learn the basics of Javascript, CSS and HTML through online resources and made this website.
+		</p>
+	</div>
+	<div class="container">
+		<h2>PROJECTS</h2>
+		<div class="container extra_padding">
+			<img src="images/Render_Mouse.png" alt="mouse" class="image_right">
+			<div class="text_left">
+			<h3>Computer Mouse Body</h3>
+			<p>Used Solidworks form tools to design an original sleek and ergonomic computer mouse body to be 3D printed. Constraints included designing around a circuit board from a seperate mouse and designing for 3D printability. The final result is the mouse I use to this day!</p>
+			</div>
 		</div>
-		<div class="container project_box">
-			<h1>Conveyor CAD</h1>
-			<p> Used Solidworks and imported CAD models from McMaster-Carr to create a large modular conveyor assembly with sorting abilities. The conveyor was designed with the specifications of needing to transport 20x20x20cm and 10x10x30cm boxes with a max weight of 8.48kg. More details can be found <a href="https://grabcad.com/library/modular-conveyor-system-with-sorting-1" target="_blank">here</a>.</p>
+		<div class="container extra_padding">
+			<img src="images/conveyor_render.png" alt="mouse" class="image_left">
+			<div class="text_right">
+			<h3>Conveyor Assembly</h3>
+			<p>Used Solidworks and imported CAD models from McMaster-Carr to create a large modular conveyor assembly with sorting abilities. The conveyor was designed with the specifications of needing to transport 20x20x20cm and 10x10x30cm boxes with a max weight of 8.48kg.</p>
+			</div>
 		</div>
-		<div class="container project_box">
-			<h1>Canada Airport</h1>
-			<p> Designed an airport program that read airplane flights from a textfile and displayed departure and arrival flights to Toronto. More details can be found <a href="https://github.com/tigerqye/Canada-Airport" target="_blank">here</a>.</p>
-		</div>
-		<div class="container project_box">
-			<h1>Turntable</h1>
-			<p> Used CAD knowlegde to design a turntable in Fusion 360 and printed it out using a 3D printer. Model was designed around integrating metal spheres from a children's toy. More details can be found <a href="https://grabcad.com/library/turntable-26" target="_blank">here</a>.</p>
+		<div class="container extra_padding">
+			<img src="images/goose_game.png" alt="mouse" class="image_right">
+			<div class="text_left">
+			<h3>Goose Escape Game</h3>
+			<p>Used C++ and BearlibTerminal to program an turnbased endless roguelike dungeon game with randomly generated walls and enemies. The deeper you go the more enemies and walls you spawn you'll collect bird feed along the way which allow you to pause all enemy movement. How deep can you go before you are overwelmed by enemies?</p>
+			</div>
 		</div>
 	</div>
+	<div class="container">
+		<h2>INTERESTS</h2>
+		<p>Heres justs some random facts about me.</p>
+		<ul>
+			<li>I'm 1.9m, that's pretty tall! I could reach stuff thats pretty high up, could be pretty useful during a job.</li>
+			<li>I like to play chess. Just an amatuer but its fun nonetheless typically I just stick to tactics though.</li>
+			<li>I play ultimate frisbee and like to run long distance. I even made it to OFSAA once for cross country running! Unfortunately I can not say the same for my basketball skills.</li>
+			<li>If you couldnt tell from some of my projects I love to 3d print! I have an Ender 3 Pro at home and love to think of new and interesting things to design and print.</li>
+		</ul>
+	</div>
 
-	<footer class="container fadeIn" id="footer">
-		<p>Copyright &copy; 2020 Tiger Ye</p>
+	<input type="text" value="t28ye@uwaterloo.ca" id="emailAddress">
+
+	<footer id="footer">
+		<p>Copyright &copy; 2021 Tiger Ye</p>
 	</footer>
-
-	<script src="main.js"></script>
+	<script src="newmain.js"></script>
 </body>
 </html>
