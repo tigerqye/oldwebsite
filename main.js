@@ -1,45 +1,25 @@
-const navBar = document.querySelector("#navagation");
-const stick = navBar.offsetTop;
 var load;
-var fade;
+var show_navbar;
 
-window.onscroll = function() {whenScroll()};
-
-function whenScroll(){
-	if(window.pageYOffset > stick){
-		navBar.classList.add("sticky")
-	} else {
-		navBar.classList.remove("sticky");
-	}
+function preload(){
+	load = setTimeout(to_navbar, 2000);
 }
 
-function toTop(){
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
+function to_navbar(){
+	var nav = document.querySelector("#header");
+	nav.classList.remove("fadeinwhite")
+	nav.classList.add("navbar");
+	show_navbar = setTimeout(show_nav, 2000);
+}
+
+function show_nav(){
+	var nava_bar = document.querySelector("#navagation");
+	nava_bar.style.visibility = "visible";
+	nava_bar.classList.add("fadein");
 }
 
 function copyEmail(){
 	document.querySelector("#emailAddress").select();
 	document.execCommand("copy");
-	alert("Email Copied Successfully!")
-}
-
-function preload(){
-	fade = setTimeout(fadeaway, 1000);
-	load = setTimeout(show, 3000);
-}
-
-function fadeaway(){
-	var loading = document.querySelector("#loader");
-	loading.classList.add("fadeOut")
-}
-
-function show(){
-	var containers = document.querySelectorAll(".container, .withbackground");
-	var i;
-	for(i = 0; i < containers.length; i++)
-	{
-		containers[i].style.display = "block";
-	}
-	document.querySelector("#loader").style.display = "none";
+	alert("Email Copied to Clipboad");
 }
