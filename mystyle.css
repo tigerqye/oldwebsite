@@ -1,8 +1,3 @@
-html{
-	scroll-behavior: smooth;
-}
-
-/*body font*/
 body{
 	background-color: #fff;
 	color: black;
@@ -12,33 +7,49 @@ body{
 	margin:0;
 }
 
-a{
-	color: #00BBEE;
-	text-decoration: none;
+@keyframes navbar {
+	from{height: 100%;}
+	to{height: 100px;}
 }
 
-.fadeIn{
-	animation-duration: 3000ms;
-	animation-name: fadein;
+.navbar {
+	animation-name: navbar;
+	animation-duration: 2000ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes textleft {
+	from{left: 50%; top: 50%; transform: translate(-50%, -50%)}
+	to{left: 10%; top: 25px; transform: translate(0, -50%)}
+}
+
+.textleft {
+	animation-name: textleft;
+	animation-duration: 2000ms;
 }
 
 @keyframes fadein {
-	from{opacity: 0;}
-	to{opacity: 1;}
+	from{opacity: 0; left: 36%;}
+	to{opacity: 1; left: 40%;}
 }
 
-.fadeOut{
-	animation-duration: 2000ms;
-	animation-name: fadeout;
+.fadein {
+	animation-name: fadein;
+	animation-duration: 1000ms;
 }
 
-@keyframes fadeout {
-	from{opacity: 1;}
-	to{opacity: 0;}
+@keyframes fadeinwhite {
+	from{background: white;}
+	to{background: black;}
 }
 
-#loader {
-	position: absolute;
+.fadeinwhite {
+	animation-name: fadeinwhite;
+	animation-duration: 1000ms;
+}
+
+#header {
+	position: fixed;
 	top: 0;
 	bottom: 0;
   	margin: 0;
@@ -46,42 +57,71 @@ a{
 	background-color: black;
 	overflow: hidden;
 	color: white;
-	text-align: center;
 }
 
-#loader h1{
+#header h1{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	animation-name: textleft;
+	animation-delay: 2000ms;
+	animation-duration: 2000ms;
+	animation-fill-mode: forwards;
+}
+/*fix the nav bar left 40% it starts to look bad when screen is compressed*/
+#navagation{
+	background-color: black;
+ 	overflow: hidden;
+ 	position: relative;
+ 	left: 40%;
+ 	height: 100px;
+ 	visibility: hidden;
 }
 
-/*container*/
+#navagation ul{
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	display: inline-flex;
+	top: 50%;
+	transform: translate(0,-50%);
+	list-style: none;
+	font-size: 16px;
+	visibility: inherit;
+}
+
+#navagation li{
+	background-color: black;
+	float: right;
+	visibility: inherit;
+	padding: 10px;
+	transition-duration: 500ms;
+	transition-property: background;
+}
+
+#navagation a{
+	color: #cccccc;
+	text-decoration: none;
+	padding-left: 30px;
+	padding-right: 30px;
+	visibility: inherit;
+	transition: 500ms;
+}
+
+#navagation a:hover {
+	color: white;
+	transition: 500ms;
+}
+
+#profile{
+	margin-top: 120px;
+}
+
 .container{
-	width:80%;
+	width: 80%;
 	margin: auto;
 	overflow: hidden;
-	z-index: -1;
-	display: none;
-}
-
-.half{
-	width: 50%;
-	box-sizing: border-box;
-	float: left;
-	padding: 10px;
-}
-
-.half img{
-	height: auto;
-	width: 80%;
-}
-
-.withbackground{
-	background-color: black;
-	color: white;
-	padding: 30px;
-	display: none;
 }
 
 #emailAddress{
@@ -89,39 +129,9 @@ a{
 	top: -30px;
 }
 
-/*for the heading*/
-#main-header{
-	background-color: black;
-	color: white;
-	text-align: left;
-	padding: 10px;
-}
-
-#logo{
-	background: url("./images/logo.png") no-repeat;
-	padding: none;
-	margin: none;
-	border: none;
-	cursor: pointer;
-	display: inline-block;
-	min-height: 32px;
-	min-width: 64px;
-	background-color: inherit;
-}
-
-#logo:active{
-	border:none;
-	outline:none;
-	padding:0;
-}
-
-#logo:focus{
-	outline: 0;
-}
-
 #email{
 	background-color: inherit;
-	color: white;
+	color: #cccccc;
 	padding: none;
 	margin: none;
 	border: none;
@@ -130,6 +140,7 @@ a{
 	font-size: inherit;
 	padding-left: 30px;
 	padding-right: 30px;
+	transition: 500ms;
 }
 
 #email:active{
@@ -142,69 +153,96 @@ a{
 	outline: 0;
 }
 
-#navagation{
-	background-color: black;
- 	overflow: hidden;
-}
-
-#navagation ul{
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	font-size: 16px;
-}
-
-#navagation li{
-	background-color: black;
-	float:left;
-	display: inline-flex;
-	padding: 10px;
-	transition-duration: 500ms;
-	transition-property: background;
-}
-
-#navagation a{
+#email:hover{
 	color: white;
-	text-decoration: none;
-	padding-left: 30px;
-	padding-right: 30px;
+	transition-duration: 500ms;
 }
 
-#navagation li:hover{
-	background: grey;
+.full_back{
+	background-color: black;
+	color: white;
+	padding: 15px;
 }
 
-.project_box{
+.image_left{
 	float: left;
-	width: calc(50% - 20px);
-	background-color: black;
-	padding-left: 20px;
-	padding-right: 20px;
-	border: 10px black transparent;
-	box-sizing: border-box;
-	margin: 10px;
-	height: 500px;
-	transition-duration: 500ms;
-	color: white;
+	width: 30%;
+	transition: 500ms;
 }
 
-/*
-.project_box:hover {
-	background: grey;
+.text_right{
+	width: 60%;
+	float: right;
+	transition: 500ms;
 }
-*/
+
+.image_right{
+	float: right;
+	width: 30%;
+	transition: 500ms;
+}
+
+.text_left{
+	width: 60%;
+	float: left;
+	transition: 500ms;
+}
+
+.extra_padding{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
 
 #footer{
 	margin-top: 10px;
 	text-align: center;
 	font-size: 10px;
 	background-color: black;
-	color: white;
+	color: #cccccc;
 	overflow: hidden;
 }
 
-.sticky{
-  position: fixed;
-  top: 0;
-  width: 80%;
+@media screen and (max-width: 1435px){
+	.image_left{
+		width: 50%;
+		transition: 500ms;
+	}
+
+	.text_right{
+		width: 50%;
+		transition: 500ms;
+	}
+}
+
+@media screen and (max-width: 1125px){
+	.image_left{
+		width: 100%;
+		transition: 500ms;
+	}
+
+	.text_right{
+		width: 100%;
+		transition: 500ms;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.image_left{
+		width: 100%;
+		transition: 500ms;
+	}
+
+	.text_right{
+		width: 100%;
+		transition: 500ms;
+	}
+	.image_right{
+		width: 100%;
+		transition: 500ms;
+	}
+
+	.text_left{
+		width: 100%;
+		transition: 500ms;
+	}
 }
