@@ -164,6 +164,28 @@ body{
 	padding: 15px;
 }
 
+.project{
+	display: flex;
+   	align-items: center;
+   	justify-content: space-around;
+   	background-color: black;
+   	color: white;
+   	padding: 20px;
+   	transition-duration: 500ms;
+}
+
+.image_left_prof{
+	float: left;
+	width: 30%;
+	transition: 500ms;
+}
+
+.text_right_prof{
+	width: 60%;
+	float: right;
+	transition: 500ms;
+}
+
 .image_left{
 	float: left;
 	width: 30%;
@@ -203,30 +225,22 @@ body{
 }
 
 @media screen and (max-width: 1435px){
-	.image_left{
+	.image_left_prof{
 		width: 50%;
 		transition: 500ms;
 	}
 
-	.text_right{
+	.text_right_prof{
 		width: 50%;
 		transition: 500ms;
 	}
 }
 
-@media screen and (max-width: 1125px){
-	.image_left{
-		width: 100%;
-		transition: 500ms;
+@media screen and (max-width: 1220px){
+	.project{
+		display: block;
 	}
 
-	.text_right{
-		width: 100%;
-		transition: 500ms;
-	}
-}
-
-@media screen and (max-width: 800px){
 	.image_left{
 		width: 100%;
 		transition: 500ms;
@@ -242,6 +256,18 @@ body{
 	}
 
 	.text_left{
+		width: 100%;
+		transition: 500ms;
+	}
+}
+
+@media screen and (max-width: 1125px){
+	.image_left_prof{
+		width: 100%;
+		transition: 500ms;
+	}
+
+	.text_right_prof{
 		width: 100%;
 		transition: 500ms;
 	}
