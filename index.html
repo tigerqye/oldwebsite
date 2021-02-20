@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body onload="preload()">
+
 	<div id="header" class="fadeinwhite">
 		<h1>Tiger Ye</h1>
 		<nav id="navagation">
@@ -22,7 +23,16 @@
 			<li><a href="images/Tiger_Ye_Resume.pdf" target="_blank">Resume</a></li>
 		</ul>
 		</nav>
+		<button id="drop_down" onclick="show_small()">Contact</button>
 	</div>
+	<nav id="smallnavbar">
+		<li><button onclick="copyEmail()" id="email">Email</button></li>
+		<li><a href="https://www.linkedin.com/in/tiger-ye-2999221b5/" target="_blank">LinkedIn</a></li>
+		<li><a href="https://github.com/tigerqye" target="_blank">GitHub</a></li>
+		<li><a href="https://grabcad.com/tiger.ye-1" target="_blank">GrabCAD</a></li>
+		<li><a href="images/Tiger_Ye_Resume.pdf" target="_blank">Resume</a></li>
+	</nav>
+
 	<div class="container" id="profile">
 		<img src="images/profe.png" alt="profile" class="image_left_prof">
 		<div class="text_right_prof">
@@ -37,7 +47,7 @@
 		<h2>SKILLS</h2>
 		<p><b>Languages:</b> C++, Java, Python, Javascript, CSS, HTML</p>
 		<p><b>CAD:</b> Solidworks, Inventor, Fusion 360, AutoCAD, TinkerCAD</p>
-		<p><b>Other:</b> Microsoft Office, Cura, GrabCAD Print, Photoshop</p>
+		<p><b>Other:</b> Microsoft Office, Cura, GrabCAD Print, GrabCAD Workbench, Photoshop</p>
 		</div>
 	</div>
 	<div class="container">
@@ -61,12 +71,12 @@
 			</div>
 			<img src="images/Render_Mouse.png" alt="mouse" class="image_right">
 		</div>
-		<div class="container extra_padding project">
-			<img src="images/conveyor_render.png" alt="mouse" class="image_left">
+		<div class="container extra_padding project transition_helper">
 			<div class="text_right">
 			<h3>Conveyor Assembly</h3>
 			<p>Used Solidworks and imported CAD models from McMaster-Carr to create a large modular conveyor assembly with sorting abilities. The conveyor was designed with the specifications of needing to transport 20x20x20cm and 10x10x30cm boxes with a max weight of 8.48kg.</p>
 			</div>
+			<img src="images/conveyor_render.png" alt="mouse" class="image_left">
 		</div>
 		<div class="container extra_padding project">
 			<div class="text_left">
@@ -74,6 +84,16 @@
 			<p>Used C++ and BearlibTerminal to program an turnbased endless roguelike dungeon game with randomly generated walls and enemies. The deeper you go the more enemies and walls you spawn you'll collect bird feed along the way which allow you to pause all enemy movement. How deep can you go before you are overwelmed by enemies?</p>
 			</div>
 			<img src="images/goose_game.png" alt="mouse" class="image_right">
+		</div>
+		<div class="container extra_padding project transition_helper">
+			<div class="text_right">
+			<h3>FRC Mechanical Hook</h3>
+			<p>Used Fusion 360 to design a mechanical single use hook for Team 1246 FRC robot. A single use hook was needed to ensure the elevator would not descend during power off period at end of game. The mechanism utilizes spare parts found workshop and a custom milled aluminum hook. Look at it, thats my baby.</p>
+			</div>
+			<video controls>
+		      <source src="images/hook_mechanism.mp4" type="video/mp4">
+		      Your browser does not support HTML5 video.
+		    </video>
 		</div>
 	</div>
 	<div class="container">
