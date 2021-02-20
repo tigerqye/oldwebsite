@@ -7,6 +7,10 @@ body{
 	margin:0;
 }
 
+video{
+	width: 30%;
+}
+
 @keyframes navbar {
 	from{height: 100%;}
 	to{height: 100px;}
@@ -38,6 +42,16 @@ body{
 	animation-duration: 1000ms;
 }
 
+@keyframes fadein_ten {
+	from{opacity: 0; right: 14%;}
+	to{opacity: 1; right: 10%;}
+}
+
+.fadein_ten {
+	animation-name: fadein_ten;
+	animation-duration: 1000ms;
+}
+
 @keyframes fadeinwhite {
 	from{background: white;}
 	to{background: black;}
@@ -57,6 +71,7 @@ body{
 	background-color: black;
 	overflow: hidden;
 	color: white;
+	z-index: 20;
 }
 
 #header h1{
@@ -69,7 +84,7 @@ body{
 	animation-duration: 2000ms;
 	animation-fill-mode: forwards;
 }
-/*fix the nav bar left 40% it starts to look bad when screen is compressed*/
+
 #navagation{
 	background-color: black;
  	overflow: hidden;
@@ -114,6 +129,81 @@ body{
 	transition: 500ms;
 }
 
+#drop_down{
+	position: absolute;
+	color: #cccccc;
+	padding: none;
+	margin: none;
+	border: none;
+	cursor: pointer;
+	font-size: 20px;
+	right: 10%;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	background-color: black;
+	display: none;
+	visibility: hidden;
+	transition-duration: 500ms;
+}
+
+#drop_down:active{
+	border:none;
+	outline:none;
+	padding:none;
+}
+
+#drop_down:focus{
+	outline: 0;
+}
+
+#drop_down:hover{
+	color: white;
+	transition-duration: 500ms;
+}
+
+#smallnavbar{
+	background-color: black;
+	margin-top: -20px;
+	position: fixed;
+	opacity: 0.8;
+	width: 100%;
+	color: #cccccc;
+	list-style-type: none;
+	display: none;
+	visibility: hidden;
+}
+
+#smallnavbar ul{
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	overflow: hidden;
+	list-style: none;
+	font-size: 16px;
+	visibility: inherit;
+}
+
+#smallnavbar li{
+	background-color: black;
+	visibility: inherit;
+	text-align: center;
+	padding: 10px;
+	color: #cccccc;
+}
+
+#smallnavbar li:hover{
+	color: white;
+}
+
+#smallnavbar a{
+	color: inherit;
+	text-decoration: none;
+	padding-left: 30px;
+	padding-right: 30px;
+	visibility: inherit;
+}
+
 #profile{
 	margin-top: 120px;
 }
@@ -140,7 +230,7 @@ body{
 	font-size: inherit;
 	padding-left: 30px;
 	padding-right: 30px;
-	transition: 500ms;
+	transition-duration: inherit;
 }
 
 #email:active{
@@ -155,7 +245,7 @@ body{
 
 #email:hover{
 	color: white;
-	transition-duration: 500ms;
+	transition-duration: inherit;
 }
 
 .full_back{
@@ -210,6 +300,10 @@ body{
 	transition: 500ms;
 }
 
+.transition_helper{
+	flex-direction: row-reverse;
+}
+
 .extra_padding{
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -229,10 +323,14 @@ body{
 		width: 50%;
 		transition: 500ms;
 	}
-
+ 
 	.text_right_prof{
 		width: 50%;
 		transition: 500ms;
+	}
+
+	#drop_down{
+		display: none;
 	}
 }
 
@@ -259,6 +357,18 @@ body{
 		width: 100%;
 		transition: 500ms;
 	}
+
+	.transition_help{
+		flex-direction: row;
+	}
+
+	#drop_down{
+		display: none;
+	}
+
+	video{
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 1125px){
@@ -270,5 +380,17 @@ body{
 	.text_right_prof{
 		width: 100%;
 		transition: 500ms;
+	}
+
+	#navagation{
+		display: none;
+	}
+
+	#drop_down{
+		display: block;
+	}
+
+	#smallnavbar{
+		display: block;
 	}
 }
