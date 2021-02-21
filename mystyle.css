@@ -62,6 +62,16 @@ video{
 	animation-duration: 1000ms;
 }
 
+.hover_link a{
+	color: #cccccc;
+	transition-duration: 500ms;
+}
+
+.hover_link a:hover{
+	color: white;
+	transition-duration: 500ms;	
+}
+
 #header {
 	position: fixed;
 	top: 0;
@@ -254,6 +264,14 @@ video{
 	padding: 15px;
 }
 
+.experience{
+	display: flex;
+   	align-items: center;
+   	justify-content: space-around;
+   	padding: 20px;
+   	transition-duration: 500ms;
+}
+
 .project{
 	display: flex;
    	align-items: center;
@@ -368,6 +386,10 @@ video{
 
 	video{
 		width: 100%;
+	}
+
+	.experience{
+		display: block;
 	}
 }
 
