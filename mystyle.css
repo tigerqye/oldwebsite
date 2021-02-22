@@ -336,7 +336,7 @@ video{
 	overflow: hidden;
 }
 
-@media screen and (max-width: 1435px){
+@media screen and (max-width: 1455px){
 	.image_left_prof{
 		width: 50%;
 		transition: 500ms;
@@ -352,7 +352,7 @@ video{
 	}
 }
 
-@media screen and (max-width: 1220px){
+@media screen and (max-width: 1250px){
 	.project{
 		display: block;
 	}
